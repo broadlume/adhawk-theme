@@ -26,14 +26,17 @@ gulp.task('js', () => {
     return gulp.src([
         './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
         './node_modules/jquery/dist/jquery.min.js',
-        './custom/custom.js',
+        './custom/*.js',
     ])
         .pipe(gulp.dest('./dist/js'));
 });
 
 gulp.task('serve', ['html', 'sass', 'fonts', 'js'], () => {
     browserSync.init({
-        server: './dist'
+        open: false,
+        port: 3030,
+        host: 'http://local.tryadhawk.com',
+        server: './dist',
     });
 
     gulp.watch('*.scss', ['sass']);
@@ -45,5 +48,8 @@ gulp.task('deploy', () => {
     .pipe(ghPages());
 });
 
+gulp.task('watch', ['serve'], () => {
+  return require("openurl").open("http://local.tryadhawk.com:3030");
+});
 
-gulp.task('default', ['serve']);
+gulp.task('default', ['watch']);
