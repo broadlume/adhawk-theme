@@ -39,7 +39,7 @@ gulp.task('serve', ['html', 'sass', 'fonts', 'js'], () => {
         server: './dist',
     });
 
-    gulp.watch('*.scss', ['sass']);
+    gulp.watch('scss/*.scss', ['sass']);
     gulp.watch('index.html').on('change', browserSync.reload);
 });
 
