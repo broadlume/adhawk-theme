@@ -9,7 +9,7 @@ gulp.task('html', () => {
 });
 
 gulp.task('sass', () => {
-    return gulp.src(['./adhawk.scss', './custom/custom.scss'])
+    return gulp.src(['./scss/theme.scss', './custom/custom.scss'])
         .pipe(sass({
             includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets'],
         }))
