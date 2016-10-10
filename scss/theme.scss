@@ -3,22 +3,22 @@
 
 // Buttons ====================================================================
 
-.btn {
-  box-shadow: 0 1px 0 rgba(#000, 0.5);
-}
+// .btn {
+//   box-shadow: 0 1px 0 rgba(#000, 0.5);
+// }
 
-.btn:active {
-  @include box-shadow(none);
-}
+// .btn:active {
+//   @include box-shadow(none);
+// }
 
 // Tables =================================================================
 
-.table {
-  th {
-    font-size: $font-size-large;
-  }
+// .table {
+//   th {
+//     font-size: $font-size-large;
+//   }
 
-  td {
-    font-size: $font-size-large;
-  }
-}
+//   td {
+//     font-size: $font-size-large;
+//   }
+// }
