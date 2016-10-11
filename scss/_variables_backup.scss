@@ -1,9 +1,9 @@
-// Override Bootstrap variables here (defaults from bootstrap-sass v3.3.7):
-
 //
 // Variables
 // --------------------------------------------------
 
+
+// $bootstrap-sass-asset-helper: true;
 
 //== Colors
 //
@@ -11,16 +11,16 @@
 
 $gray-base:              #000;
 $gray-darker:            lighten($gray-base, 13.5%); // #222
-$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray-dark:              lighten($gray-base, 20%);  // #333
 $gray:                   lighten($gray-base, 33.5%); // #555
 $gray-light:             lighten($gray-base, 46.7%); // #777
-$gray-lighter:           lighten($gray-base, 95%); // #eee
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
 
-$brand-primary:         #1CCB8D; // #FF0000
-$brand-success:         #2ECC71;
-$brand-info:            $gray-light;
+$brand-primary:         darken(#428bca, 6.5%); // #337ab7
+$brand-success:         #00d591;
+$brand-info:            #5bc0de;
 $brand-warning:         #f39c12;
-$brand-danger:          #FF0000;
+$brand-danger:          #d9534f;
 
 
 //== Scaffolding
@@ -28,17 +28,14 @@ $brand-danger:          #FF0000;
 //## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #EBEBEB;
-
+// $body-bg:               #fff
 //** Global text color on `<body>`.
-$text-color:            $gray;
+// $text-color:            $gray-dark
 
 //** Global textual link color.
 // $link-color:            $brand-primary
-
 //** Link hover color set via `darken()` function.
 // $link-hover-color:      darken($link-color, 15%)
-
 //** Link hover decoration.
 // $link-hover-decoration: underline
 
@@ -49,14 +46,14 @@ $text-color:            $gray;
 
 $font-family-sans-serif:  "proxima-nova","Helvetica Neue", Helvetica, Arial, sans-serif;
 // $font-family-serif:       Georgia, "Times New Roman", Times, serif
-
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
 // $font-family-base:        $font-family-sans-serif
 
-$font-size-base:          16px;
-$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
+$font-size-base:          14px;
 $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
+$font-size-medium:        ceil(($font-size-base * 1.13));
+$font-size-large:         ceil(($font-size-base * 1.25)); // ~18px
 
 // $font-size-h1:            floor(($font-size-base * 2.6)) // ~36px
 // $font-size-h2:            floor(($font-size-base * 2.15)) // ~30px
@@ -66,10 +63,9 @@ $font-size-small:         ceil(($font-size-base * 0.85)); // ~12px
 // $font-size-h6:            ceil(($font-size-base * 0.85)) // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-$line-height-base:        1.428571429; // 20/14
-
+// $line-height-base:        1.428571429 // 20/14
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
+// $line-height-computed:    floor(($font-size-base * $line-height-base)) // ~20px
 
 //** By default, this inherits from the `<body>`.
 // $headings-font-family:    inherit
@@ -86,7 +82,7 @@ $line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 // [converter] If $bootstrap-sass-asset-helper if used, provide path relative to the assets load path.
 // [converter] This is because some asset helpers, such as Sprockets, do not work with file-relative paths.
-// $icon-font-path: if($bootstrap-sass-asset-helper, "bootstrap/", "../fonts/bootstrap/")
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 //** File name for all font files.
 // $icon-font-name:          "glyphicons-halflings-regular"
@@ -110,19 +106,19 @@ $padding-small-horizontal:  10px;
 $padding-xs-vertical:       1px;
 $padding-xs-horizontal:     5px;
 
-$line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
-$line-height-small:         1.5;
+// $line-height-large:         1.3333333 // extra decimals for Win 8.1 Chrome
+// $line-height-small:         1.5
 
-$border-radius-base:        3px;
-$border-radius-large:       5px;
-$border-radius-small:       2px;
+$border-radius-base: 0px;
+$border-radius-large: 0px;
+$border-radius-small: 0px;
 
 //** Global color for active items (e.g., navs or dropdowns).
-// $component-active-color:    #fff
+$component-active-color:    #fff;
 //** Global background color for active items (e.g., navs or dropdowns).
-// $component-active-bg:       $brand-primary
+$component-active-bg:       $brand-primary;
 
-//** Width of the `border` for generating carets that indicate dropdowns.
+//** Width of the `border` for generating carets that indicator dropdowns.
 // $caret-width-base:          4px
 //** Carets increase slightly in size for larger components.
 // $caret-width-large:         5px
@@ -146,7 +142,7 @@ $border-radius-small:       2px;
 // $table-bg-active:               $table-bg-hover
 
 //** Border color for table and cell borders.
-// $table-border-color:            #ddd
+$table-border-color:            rgba(black, 0.15);
 
 
 //== Buttons
@@ -160,31 +156,31 @@ $border-radius-small:       2px;
 // $btn-default-border:             #ccc
 
 // $btn-primary-color:              #fff
-// $btn-primary-bg:                 $brand-primary
-// $btn-primary-border:             darken($btn-primary-bg, 5%)
+$btn-primary-bg:                 $brand-primary;
+$btn-primary-border:             transparent;
 
 // $btn-success-color:              #fff
-// $btn-success-bg:                 $brand-success
-// $btn-success-border:             darken($btn-success-bg, 5%)
+$btn-success-bg:                 $brand-success;
+$btn-success-border:             transparent;
 
 // $btn-info-color:                 #fff
-// $btn-info-bg:                    $brand-info
-// $btn-info-border:                darken($btn-info-bg, 5%)
+$btn-info-bg:                    $brand-info;
+$btn-info-border:                transparent;
 
 // $btn-warning-color:              #fff
-// $btn-warning-bg:                 $brand-warning
-// $btn-warning-border:             darken($btn-warning-bg, 5%)
+$btn-warning-bg:                 $brand-warning;
+$btn-warning-border:             transparent;
 
 // $btn-danger-color:               #fff
-// $btn-danger-bg:                  $brand-danger
-// $btn-danger-border:              darken($btn-danger-bg, 5%)
+$btn-danger-bg:                  $brand-danger;
+$btn-danger-border:              transparent;
 
 // $btn-link-disabled-color:        $gray-light
 
 // Allows for customizing button radius independently from global border radius
-// $btn-border-radius-base:         $border-radius-base
-// $btn-border-radius-large:        $border-radius-large
-// $btn-border-radius-small:        $border-radius-small
+$btn-border-radius-base:         3px;
+$btn-border-radius-large:        $btn-border-radius-base;
+$btn-border-radius-small:        $btn-border-radius-base;
 
 
 //== Forms
@@ -242,32 +238,32 @@ $border-radius-small:       2px;
 //
 //## Dropdown menu container and contents.
 
-//** Background for the dropdown menu.
-// $dropdown-bg:                    #fff
-//** Dropdown menu `border-color`.
-// $dropdown-border:                rgba(0,0,0,.15)
-//** Dropdown menu `border-color` **for IE8**.
-// $dropdown-fallback-border:       #ccc
-//** Divider color for between dropdown items.
-// $dropdown-divider-bg:            #e5e5e5
+// ** Background for the dropdown menu.
+$dropdown-bg:                    #fff;
+// ** Dropdown menu `border-color`.
+$dropdown-border:                rgba(black, 0.15);
+// ** Dropdown menu `border-color` **for IE8**.
+$dropdown-fallback-border:       #ccc;
+// ** Divider color for between dropdown items.
+$dropdown-divider-bg:            #e5e5e5;
 
-//** Dropdown link text color.
-// $dropdown-link-color:            $gray-dark
-//** Hover color for dropdown links.
-// $dropdown-link-hover-color:      darken($gray-dark, 5%)
-//** Hover background for dropdown links.
-// $dropdown-link-hover-bg:         #f5f5f5
+// ** Dropdown link text color.
+$dropdown-link-color:            $gray-dark;
+// ** Hover color for dropdown links.
+$dropdown-link-hover-color:      darken($gray-dark, 5%);
+// ** Hover background for dropdown links.
+$dropdown-link-hover-bg:         #f5f5f5;
 
-//** Active dropdown menu item text color.
-// $dropdown-link-active-color:     $component-active-color
-//** Active dropdown menu item background color.
-// $dropdown-link-active-bg:        $component-active-bg
+// ** Active dropdown menu item text color.
+$dropdown-link-active-color:     $component-active-color;
+// ** Active dropdown menu item background color.
+$dropdown-link-active-bg:        $component-active-bg;
 
-//** Disabled dropdown menu item background color.
-// $dropdown-link-disabled-color:   $gray-light
+// ** Disabled dropdown menu item background color.
+$dropdown-link-disabled-color:   $gray-light;
 
-//** Text color for headers within dropdown menus.
-// $dropdown-header-color:          $gray-light
+// ** Text color for headers within dropdown menus.
+$dropdown-header-color:          $gray-light;
 
 //** Deprecated `$dropdown-caret-color` as of v3.1.0
 // $dropdown-caret-color:           #000
@@ -368,23 +364,23 @@ $border-radius-small:       2px;
 //##
 
 // Basics of a navbar
-$navbar-height:                    54px;
-$navbar-margin-bottom:             $line-height-computed;
-$navbar-border-radius:             0;
+// $navbar-height:                    50px;
+// $navbar-margin-bottom:             $line-height-computed
+// $navbar-border-radius:             $border-radius-base
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2))
-// $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2)
+// $navbar-padding-vertical:          18px;
 // $navbar-collapse-max-height:       340px
 
-$navbar-default-color:             $gray-light;
-$navbar-default-bg:                #fff;
-$navbar-default-border:            darken($navbar-default-bg, 20%);
+// $navbar-default-color:             #777
+// $navbar-default-bg:                #f8f8f8
+// $navbar-default-border:            darken($navbar-default-bg, 6.5%)
 
 // Navbar links
-// $navbar-default-link-color:                #777;
-$navbar-default-link-hover-color:          $gray-base;
-$navbar-default-link-hover-bg:             $gray-lighter;
-$navbar-default-link-active-color:         #000;
-$navbar-default-link-active-bg:            $navbar-default-bg;
+// $navbar-default-link-color:                #777
+// $navbar-default-link-hover-color:          #333
+// $navbar-default-link-hover-bg:             transparent
+// $navbar-default-link-active-color:         #555
+// $navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%)
 // $navbar-default-link-disabled-color:       #ccc
 // $navbar-default-link-disabled-bg:          transparent
 
@@ -402,15 +398,15 @@ $navbar-default-link-active-bg:            $navbar-default-bg;
 //=== Inverted navbar
 // Reset inverted navbar basics
 // $navbar-inverse-color:                      lighten($gray-light, 15%)
-// $navbar-inverse-bg:                         #222
-// $navbar-inverse-border:                     darken($navbar-inverse-bg, 10%)
+$navbar-inverse-bg:                            #262a29;
+$navbar-inverse-border:                       transparent;
 
 // Inverted navbar links
-// $navbar-inverse-link-color:                 lighten($gray-light, 15%)
+$navbar-inverse-link-color:                 $gray-light;
 // $navbar-inverse-link-hover-color:           #fff
-// $navbar-inverse-link-hover-bg:              transparent
+$navbar-inverse-link-hover-bg:              #000;
 // $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color
-// $navbar-inverse-link-active-bg:             darken($navbar-inverse-bg, 10%)
+$navbar-inverse-link-active-bg:                #000;
 // $navbar-inverse-link-disabled-color:        #444
 // $navbar-inverse-link-disabled-bg:           transparent
 
@@ -725,7 +721,7 @@ $navbar-default-link-active-bg:            $navbar-default-bg;
 
 // $panel-default-text:          $gray-dark
 // $panel-default-border:        #ddd
-// $panel-default-heading-bg:    #f5f5f5
+$panel-default-heading-bg: #fff;
 
 // $panel-primary-text:          #fff
 // $panel-primary-border:        $brand-primary
@@ -874,7 +870,5 @@ $navbar-default-link-active-bg:            $navbar-default-bg;
 // $page-header-border-color:    $gray-lighter
 //** Width of horizontal description list titles
 // $dl-horizontal-offset:        $component-offset-horizontal
-//** Point at which .dl-horizontal becomes horizontal
-// $dl-horizontal-breakpoint:    $grid-float-breakpoint
 //** Horizontal line color.
 // $hr-border:                   $gray-lighter

@@ -1,24 +1,66 @@
 @import './_variables';
 @import 'bootstrap';
 
-// Buttons ====================================================================
+// Shared Styles ====================================================================
 
-.btn {
-  box-shadow: 0 1px 0 rgba(#000, 0.5);
+.no-bottom-border {
+	border-bottom: none !important;
+	box-shadow: 0 1px 0 rgba(#000, 0.4);
 }
 
-.btn:active {
-  @include box-shadow(none);
+// Buttons ====================================================================
+
+.btn:not(.btn-link) {
+	@extend .no-bottom-border;
+  position: relative;
+}
+
+.btn:active:not(.btn-link) {
+	@extend .no-bottom-border;
+
+	box-shadow: inset 0 1px 2px rgba(#000, 0.25);
+  top: 1px;
 }
 
 // Tables =================================================================
 
-.table {
-  th {
-    font-size: $font-size-large;
-  }
+// .table {
+//   th {
+//     font-size: $font-size-large;
+//   }
 
-  td {
-    font-size: $font-size-large;
-  }
+//   td {
+//     font-size: $font-size-large;
+//   }
+// }
+
+// Navbar =================================================================
+
+.navbar {
+	@extend .no-bottom-border;
+}
+
+// Active links
+.navbar-default .navbar-nav > .active > a {
+	text-decoration: underline;
+	font-weight: 800;
+}
+
+// Buttons =================================================================
+
+.btn-group-justified {
+	.btn {
+		border-right-width: 0;
+	}
+
+	.btn:last-child{
+		border-right-width: 1px; 
+	} 
+}
+
+
+// Headers =================================================================
+
+h1,h2,h3 {
+	font-weight: 100;
 }
