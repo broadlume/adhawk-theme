@@ -40,7 +40,14 @@
 	@extend .no-bottom-border;
 }
 
+// Active links
 .navbar-default .navbar-nav > .active > a {
 	text-decoration: underline;
 	font-weight: 800;
+}
+
+// Headers
+
+h1,h2,h3 {
+	font-weight: 100;
 }
