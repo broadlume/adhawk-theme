@@ -46,7 +46,20 @@
 	font-weight: 800;
 }
 
-// Headers
+// Buttons =================================================================
+
+.btn-group-justified {
+	.btn {
+		border-right-width: 0;
+	}
+
+	.btn:last-child{
+		border-right-width: 1px; 
+	} 
+}
+
+
+// Headers =================================================================
 
 h1,h2,h3 {
 	font-weight: 100;
