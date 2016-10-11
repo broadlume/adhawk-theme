@@ -3,13 +3,24 @@
 
 // Buttons ====================================================================
 
-// .btn {
-//   box-shadow: 0 1px 0 rgba(#000, 0.5);
-// }
+.btn-cust {
+	border-bottom: none !important;
+}
 
-// .btn:active {
-//   @include box-shadow(none);
-// }
+
+.btn:not(.btn-link) {
+	@extend .btn-cust;
+
+  box-shadow: 0 1px 0 rgba(#000, 0.5);
+  position: relative;
+}
+
+.btn:active:not(.btn-link) {
+	@extend .btn-cust;
+
+	box-shadow: inset 0 1px 2px rgba(#000, 0.25);
+  top: 1px;
+}
 
 // Tables =================================================================
 
