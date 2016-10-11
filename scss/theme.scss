@@ -38,5 +38,9 @@
 
 .navbar {
 	@extend .no-bottom-border;
+}
 
+.navbar-default .navbar-nav > .active > a {
+	text-decoration: underline;
+	font-weight: 800;
 }
