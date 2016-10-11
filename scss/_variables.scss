@@ -31,7 +31,7 @@ $brand-danger:          #FF0000;
 $body-bg:               #EBEBEB;
 
 //** Global text color on `<body>`.
-// $text-color:            $gray-dark
+$text-color:            $gray;
 
 //** Global textual link color.
 // $link-color:            $brand-primary
@@ -54,7 +54,7 @@ $font-family-sans-serif:  "proxima-nova","Helvetica Neue", Helvetica, Arial, san
 // $font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace
 // $font-family-base:        $font-family-sans-serif
 
-// $font-size-base:          14px
+$font-size-base:          14px;
 // $font-size-large:         ceil(($font-size-base * 1.25)) // ~18px
 // $font-size-small:         ceil(($font-size-base * 0.85)) // ~12px
 
@@ -66,9 +66,10 @@ $font-family-sans-serif:  "proxima-nova","Helvetica Neue", Helvetica, Arial, san
 // $font-size-h6:            ceil(($font-size-base * 0.85)) // ~12px
 
 //** Unit-less `line-height` for use in components like buttons.
-// $line-height-base:        1.428571429 // 20/14
+$line-height-base:        1.428571429; // 20/14
+
 //** Computed "line-height" (`font-size` * `line-height`) for use with `margin`, `padding`, etc.
-// $line-height-computed:    floor(($font-size-base * $line-height-base)) // ~20px
+$line-height-computed:    floor(($font-size-base * $line-height-base)); // ~20px
 
 //** By default, this inherits from the `<body>`.
 // $headings-font-family:    inherit
@@ -97,24 +98,24 @@ $font-family-sans-serif:  "proxima-nova","Helvetica Neue", Helvetica, Arial, san
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-// $padding-base-vertical:     6px
-// $padding-base-horizontal:   12px
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
 
-// $padding-large-vertical:    10px
-// $padding-large-horizontal:  16px
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
 
-// $padding-small-vertical:    5px
-// $padding-small-horizontal:  10px
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
 
-// $padding-xs-vertical:       1px
-// $padding-xs-horizontal:     5px
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
 
-// $line-height-large:         1.3333333 // extra decimals for Win 8.1 Chrome
-// $line-height-small:         1.5
+$line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
+$line-height-small:         1.5;
 
-// $border-radius-base:        4px
-// $border-radius-large:       6px
-// $border-radius-small:       3px
+$border-radius-base:        3px;
+$border-radius-large:       5px;
+$border-radius-small:       2px;
 
 //** Global color for active items (e.g., navs or dropdowns).
 // $component-active-color:    #fff
@@ -367,16 +368,16 @@ $font-family-sans-serif:  "proxima-nova","Helvetica Neue", Helvetica, Arial, san
 //##
 
 // Basics of a navbar
-// $navbar-height:                    50px
-// $navbar-margin-bottom:             $line-height-computed
-// $navbar-border-radius:             $border-radius-base
+$navbar-height:                    54px;
+$navbar-margin-bottom:             $line-height-computed;
+$navbar-border-radius:             0;
 // $navbar-padding-horizontal:        floor(($grid-gutter-width / 2))
 // $navbar-padding-vertical:          (($navbar-height - $line-height-computed) / 2)
 // $navbar-collapse-max-height:       340px
 
-// $navbar-default-color:             #777
-// $navbar-default-bg:                #f8f8f8
-// $navbar-default-border:            darken($navbar-default-bg, 6.5%)
+$navbar-default-color:             $gray-light;
+$navbar-default-bg:                #fff;
+$navbar-default-border:            darken($navbar-default-bg, 20%);
 
 // Navbar links
 // $navbar-default-link-color:                #777

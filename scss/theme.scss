@@ -1,22 +1,22 @@
 @import './_variables';
 @import 'bootstrap';
 
-// Buttons ====================================================================
+// Shared Styles ====================================================================
 
-.btn-cust {
+.no-bottom-border {
 	border-bottom: none !important;
+	box-shadow: 0 1px 0 rgba(#000, 0.4);
 }
 
+// Buttons ====================================================================
 
 .btn:not(.btn-link) {
-	@extend .btn-cust;
-
-  box-shadow: 0 1px 0 rgba(#000, 0.5);
+	@extend .no-bottom-border;
   position: relative;
 }
 
 .btn:active:not(.btn-link) {
-	@extend .btn-cust;
+	@extend .no-bottom-border;
 
 	box-shadow: inset 0 1px 2px rgba(#000, 0.25);
   top: 1px;
@@ -33,3 +33,10 @@
 //     font-size: $font-size-large;
 //   }
 // }
+
+// Navbar =================================================================
+
+.navbar {
+	@extend .no-bottom-border;
+
+}
