@@ -43,10 +43,8 @@
 
 .navbar {
   @include no-bottom-border;
-}
 
-// Active links
-.navbar-default  {
+  // Active links
   .navbar-nav {
     > .active  > a {
       font-weight: 800;
