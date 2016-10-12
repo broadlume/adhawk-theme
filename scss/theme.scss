@@ -1,25 +1,30 @@
-@import './_variables';
+@import './variables';
 @import 'bootstrap';
 
 // Shared Styles ====================================================================
 
-.no-bottom-border {
-	border-bottom: none !important;
-	box-shadow: 0 1px 0 rgba(#000, 0.4);
+@mixin no-bottom-border {
+  border-bottom: 0;
+  box-shadow: 0 1px $gray-light;
 }
 
 // Buttons ====================================================================
 
-.btn:not(.btn-link) {
-	@extend .no-bottom-border;
-  position: relative;
-}
+.btn {
+  &:not(.btn-link) {
+    @include no-bottom-border;
 
-.btn:active:not(.btn-link) {
-	@extend .no-bottom-border;
+    position: relative;
+  }
 
-	box-shadow: inset 0 1px 2px rgba(#000, 0.25);
-  top: 1px;
+  &:active {
+    &:not(.btn-link) {
+      @include no-bottom-border;
+
+      box-shadow: inset 0 1px 2px $gray-dark;
+      top: 1px;
+    }
+  }
 }
 
 // Tables =================================================================
@@ -37,30 +42,35 @@
 // Navbar =================================================================
 
 .navbar {
-	@extend .no-bottom-border;
+  @include no-bottom-border;
 }
 
 // Active links
-.navbar-default .navbar-nav > .active > a {
-	text-decoration: underline;
-	font-weight: 800;
+.navbar-default  {
+  .navbar-nav {
+    > .active  > a {
+      font-weight: 800;
+      text-decoration: underline;
+    }
+  }
 }
 
 // Buttons =================================================================
 
 .btn-group-justified {
-	.btn {
-		border-right-width: 0;
-	}
+  .btn {
+    border-right-width: 0;
 
-	.btn:last-child{
-		border-right-width: 1px; 
-	} 
+    &:last-child {
+      border-right-width: 1px;
+    }
+  }
 }
-
 
 // Headers =================================================================
 
-h1,h2,h3 {
-	font-weight: 100;
+h1,
+h2,
+h3 {
+  font-weight: 100;
 }

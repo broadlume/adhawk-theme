@@ -1,19 +1,28 @@
+'use strict';
+
 const gulp        = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const ghPages     = require('gulp-gh-pages');
 const openUrl     = require('openurl');
 const rimraf      = require('rimraf');
+const sassLint    = require('gulp-sass-lint');
 
 gulp.task('clean', (cb) => {
   return rimraf('./dist', cb);
 });
 
-gulp.task('html', ['clean'], () => {
+gulp.task('html', () => {
   return gulp.src('./*.html').pipe(gulp.dest('./dist'));
 });
 
-gulp.task('sass', ['clean'], () => {
+gulp.task('lint', () => {
+  return gulp.src('./scss/**/*.s+(a|c)ss')
+    .pipe(sassLint())
+    .pipe(sassLint.format());
+});
+
+gulp.task('sass', () => {
   return gulp.src(['./scss/theme.scss', './custom/custom.scss'])
     .pipe(sass({
       includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets'],
@@ -22,12 +31,12 @@ gulp.task('sass', ['clean'], () => {
     .pipe(browserSync.stream());
 });
 
-gulp.task('fonts', ['clean'], () => {
+gulp.task('fonts', () => {
   return gulp.src('./node_modules/bootstap-sass/assets/fonts/**/*')
     .pipe(gulp.dest('./dist/fonts'));
 });
 
-gulp.task('js', ['clean'], () => {
+gulp.task('js', () => {
   return gulp.src([
     './node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js',
     './node_modules/jquery/dist/jquery.min.js',
@@ -36,7 +45,7 @@ gulp.task('js', ['clean'], () => {
     .pipe(gulp.dest('./dist/js'));
 });
 
-gulp.task('watch', ['html', 'sass', 'fonts', 'js'], () => {
+gulp.task('watch', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
   browserSync.init({
     open: false,
     port: 3030,
@@ -44,7 +53,7 @@ gulp.task('watch', ['html', 'sass', 'fonts', 'js'], () => {
     server: './dist',
   }, () => openUrl.open('http://local.tryadhawk.com:3030'));
 
-  gulp.watch('./scss/*.scss', ['sass']);
+  gulp.watch('./scss/*.scss', ['sass', 'lint']);
   gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
