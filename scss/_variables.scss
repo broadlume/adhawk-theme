@@ -22,6 +22,12 @@ $brand-info:            $gray-light;
 $brand-warning:         #f39c12;
 $brand-danger:          #f00;
 
+//## Shadow colors for use with box shadows
+
+$shadow-light: rgba($gray-base, .25);
+$shadow-medium: rgba($gray-base, .5);
+$shadow-dark: rgba($gray-base, .75);
+
 
 //== Scaffolding
 //
