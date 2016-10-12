@@ -27,6 +27,16 @@
   }
 }
 
+.btn-group-justified {
+  .btn {
+    border-right-width: 0;
+
+    &:last-child {
+      border-right-width: 1px;
+    }
+  }
+}
+
 // Tables =================================================================
 
 // .table {
@@ -49,18 +59,6 @@
     > .active  > a {
       font-weight: 800;
       text-decoration: underline;
-    }
-  }
-}
-
-// Buttons =================================================================
-
-.btn-group-justified {
-  .btn {
-    border-right-width: 0;
-
-    &:last-child {
-      border-right-width: 1px;
     }
   }
 }
