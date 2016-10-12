@@ -21,7 +21,7 @@
     &:not(.btn-link) {
       @include no-bottom-border;
 
-      box-shadow: inset 0 1px 2px $gray-dark;
+      box-shadow: inset 0 1px 2px rgba(black, 0.25);
       top: 1px;
     }
   }
