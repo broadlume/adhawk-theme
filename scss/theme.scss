@@ -13,7 +13,7 @@
 
 .btn {
 
-  @include transition(.25s);
+  @include transition(.25s background-color);
   position: relative;
 
 
