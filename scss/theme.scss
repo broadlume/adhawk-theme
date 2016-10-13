@@ -13,7 +13,7 @@
 
 .btn {
 
-  transition: .15s;
+  @include transition(.25s);
   position: relative;
 
 
