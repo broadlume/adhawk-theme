@@ -4,13 +4,14 @@
 // Shared Styles ====================================================================
 
 @mixin no-bottom-border {
-  border-bottom: 0;
+  border-bottom-width: 0;
   box-shadow: 0 1px $shadow-medium;
 }
 
 // Buttons ====================================================================
 
 .btn {
+
   &:not(.btn-link) {
     @include no-bottom-border;
 
@@ -60,6 +61,18 @@
       font-weight: 800;
       text-decoration: underline;
     }
+  }
+}
+
+// Dropdowns =================================================================
+
+.dropdown-menu {
+  border-radius: 0;
+}
+
+.open {
+  .dropdown-toggle {
+    border-bottom-width: 1px !important;
   }
 }
 
