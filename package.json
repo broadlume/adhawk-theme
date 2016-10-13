@@ -16,6 +16,7 @@
     "gulp-sass": "^2.3.2",
     "gulp-sass-lint": "^1.2.0",
     "openurl": "^1.1.1",
+    "node-bourbon": "^4.2.8",
     "rimraf": "^2.5.4"
   },
   "dependencies": {
