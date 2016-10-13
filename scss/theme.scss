@@ -1,5 +1,6 @@
 @import './variables';
 @import 'bootstrap';
+@import 'bourbon';
 
 // Shared Styles ====================================================================
 
@@ -12,10 +13,12 @@
 
 .btn {
 
+  transition: .15s;
+  position: relative;
+
+
   &:not(.btn-link) {
     @include no-bottom-border;
-
-    position: relative;
   }
 
   &:active {

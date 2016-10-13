@@ -25,7 +25,8 @@ gulp.task('lint', () => {
 gulp.task('sass', () => {
   return gulp.src(['./scss/theme.scss', './custom/custom.scss'])
     .pipe(sass({
-      includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets'],
+      includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets',
+                    './node_modules/bourbon/app/assets/stylesheets'],
     }))
     .pipe(gulp.dest('./dist/css'))
     .pipe(browserSync.stream());
