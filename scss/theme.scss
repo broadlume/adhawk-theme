@@ -9,6 +9,14 @@
   box-shadow: 0 1px $shadow-medium;
 }
 
+@mixin nav-no-border {
+  border: 0;
+}
+
+@mixin nav-soft-shadow {
+  box-shadow: 0 1px 2px $shadow-light;
+}
+
 // Buttons ====================================================================
 
 .btn {
@@ -56,13 +64,40 @@
 // Navbar =================================================================
 
 .navbar {
-  @include no-bottom-border;
 
-  // Active links
-  .navbar-nav {
-    > .active  > a {
+  &.navbar-default {
+    @include no-bottom-border;
+
+    .navbar-nav > .active  > a {
       font-weight: 800;
       text-decoration: underline;
+    }
+  }
+
+  &.navbar-inverse {
+    @include nav-soft-shadow;
+    @include nav-no-border;
+
+    .navbar-nav > li > a {
+      display: block;
+      margin: auto;
+      position: relative;
+      text-align: center;
+    }
+
+    .navbar-nav > .active  > a {
+      font-weight: 800;
+
+      &::after {
+        background: $gray-base;
+        bottom: 0;
+        content: '';
+        display: block;
+        height: 4px;
+        left: 50%;
+        margin-left: -50%;
+        width: 100%;
+      }
     }
   }
 }
