@@ -63,45 +63,41 @@
 
 // Navbar =================================================================
 
-.navbar {
+.navbar.navbar-default {
+  @include no-bottom-border;
 
-  &.navbar-default {
-    @include no-bottom-border;
+  .navbar-nav > .active  > a {
+    font-weight: 800;
+    text-decoration: underline;
+  }
+}
 
-    .navbar-nav > .active  > a {
-      font-weight: 800;
-      text-decoration: underline;
-    }
+.navbar.navbar-inverse {
+  @include nav-soft-shadow;
+  @include nav-no-border;
+
+  .navbar-nav  > li > a {
+    position: relative;
+    display:block;
+    text-align: center;
+    margin:auto;
   }
 
-  &.navbar-inverse {
-    @include nav-soft-shadow;
-    @include nav-no-border;
+  .navbar-nav > .active  > a {
+    font-weight: 800;
 
-    .navbar-nav {
-      > .active  > a {
-        font-weight: 800;
-        position: relative;
-        display:block;
-        text-align: center;
-        margin:auto;
-
-        &:after {
-          background: #000;
-          content:'';
-          display:block;
-          width: 100%;
-          height: 4px;
-          position: absolute;
-          bottom:0;
-          left:50%;
-          margin-left: -50%;
-        }
-      }
+    &:after {
+      background: #000;
+      content:'';
+      display:block;
+      width: 100%;
+      height: 4px;
+      position: absolute;
+      bottom:0;
+      left:50%;
+      margin-left: -50%;
     }
   }
-
-  // Active links
 }
 
 // Dropdowns =================================================================
