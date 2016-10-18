@@ -93,10 +93,10 @@
         bottom: 0;
         content: '';
         display: block;
-        position: absolute;
         height: 4px;
         left: 50%;
         margin-left: -50%;
+        position: absolute;
         width: 100%;
       }
     }
@@ -121,4 +121,10 @@ h1,
 h2,
 h3 {
   font-weight: 100;
+}
+
+// Panels
+
+.panel {
+  @include no-bottom-border;
 }
