@@ -17,6 +17,18 @@
   box-shadow: 0 1px 2px $shadow-light;
 }
 
+@mixin active-underline($color) {
+  background: $color;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 50%;
+  margin-left: -50%;
+  position: absolute;
+  width: 100%;
+}
+
 // Buttons ====================================================================
 
 .btn {
@@ -49,18 +61,6 @@
   }
 }
 
-// Tables =================================================================
-
-// .table {
-//   th {
-//     font-size: $font-size-large;
-//   }
-
-//   td {
-//     font-size: $font-size-large;
-//   }
-// }
-
 // Navbar =================================================================
 
 .navbar {
@@ -89,15 +89,7 @@
       font-weight: 800;
 
       &::after {
-        background: $gray-base;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: 4px;
-        left: 50%;
-        margin-left: -50%;
-        position: absolute;
-        width: 100%;
+        @include active-underline($gray-base);
       }
     }
   }
@@ -146,5 +138,18 @@ h3 {
 
   .active {
     font-weight: 800;
+  }
+}
+
+// Pagination =================================================================
+
+.pagination {
+  .active > a {
+    font-weight: 800;
+    position: relative;
+
+    &::after {
+      @include active-underline($brand-primary);
+    }
   }
 }
