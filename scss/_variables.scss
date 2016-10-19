@@ -24,6 +24,7 @@ $brand-danger:          #f00;
 
 //## Shadow colors for use with box shadows
 
+$shadow-lighter: rgba($gray-base, .1);
 $shadow-light: rgba($gray-base, .25);
 $shadow-medium: rgba($gray-base, .5);
 $shadow-dark: rgba($gray-base, .75);
@@ -502,7 +503,7 @@ $pager-disabled-color:                 darken($pager-bg, 10%);
 
 // $jumbotron-padding:              30px
 // $jumbotron-color:                inherit
-// $jumbotron-bg:                   $gray-lighter
+$jumbotron-bg:                   #fff;
 // $jumbotron-heading-color:        inherit
 // $jumbotron-font-size:            ceil(($font-size-base * 1.5))
 // $jumbotron-heading-font-size:    ceil(($font-size-base * 4.5))

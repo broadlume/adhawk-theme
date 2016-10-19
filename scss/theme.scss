@@ -17,6 +17,10 @@
   box-shadow: 0 1px 2px $shadow-light;
 }
 
+@mixin nav-softer-shadow {
+  box-shadow: 0 2px 3px $shadow-lighter;
+}
+
 @mixin active-underline($color) {
   background: $color;
   bottom: 0;
@@ -111,7 +115,8 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 100;
 }
 
@@ -153,3 +158,20 @@ h3 {
     }
   }
 }
+
+// Alerts =================================================================
+.alert {
+  @include nav-softer-shadow;
+}
+
+
+//Jumbotron =================================================================
+.container,
+.container-fluid {
+
+  .jumbotron {
+    @include no-bottom-border;
+    border-radius: 0;
+  }
+}
+
