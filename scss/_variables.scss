@@ -119,6 +119,7 @@ $padding-xs-horizontal:     5px;
 $line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5;
 
+$border-radius-off: 				0;
 $border-radius-base:        3px;
 $border-radius-large:       5px;
 $border-radius-small:       2px;
@@ -513,21 +514,21 @@ $jumbotron-bg:                   #fff;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-// $state-success-text:             #3c763d
-// $state-success-bg:               #dff0d8
-// $state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%)
+$state-success-text:             #3c763d;
+$state-success-bg:               #dff0d8;
+$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
 
-// $state-info-text:                #31708f
-// $state-info-bg:                  #d9edf7
-// $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%)
+$state-info-text:                #31708f;
+$state-info-bg:                  #d9edf7;
+$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
 
-// $state-warning-text:             #8a6d3b
-// $state-warning-bg:               #fcf8e3
-// $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%)
+$state-warning-text:             #8a6d3b;
+$state-warning-bg:               #fcf8e3;
+$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
 
-// $state-danger-text:              #a94442
-// $state-danger-bg:                #f2dede
-// $state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%)
+$state-danger-text:              #a94442;
+$state-danger-bg:                #f2dede;
+$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
 
 
 //== Tooltips
@@ -582,20 +583,20 @@ $jumbotron-bg:                   #fff;
 //##
 
 //** Default label background color
-// $label-default-bg:            $gray-light
+$label-default-bg:            $gray-light;
 //** Primary label background color
-// $label-primary-bg:            $brand-primary
+$label-primary-bg:            $brand-primary;
 //** Success label background color
-// $label-success-bg:            $brand-success
+$label-success-bg:            $brand-success;
 //** Info label background color
-// $label-info-bg:               $brand-info
+$label-info-bg:               $brand-info;
 //** Warning label background color
-// $label-warning-bg:            $brand-warning
+$label-warning-bg:            $brand-warning;
 //** Danger label background color
-// $label-danger-bg:             $brand-danger
+$label-danger-bg:             $brand-danger;
 
 //** Default label text color
-// $label-color:                 #fff
+$label-color:                 #fff;
 //** Default text color of a linked label
 // $label-link-hover-color:      #fff
 
@@ -638,24 +639,26 @@ $jumbotron-bg:                   #fff;
 //## Define alert colors, border radius, and padding.
 
 // $alert-padding:               15px
-// $alert-border-radius:         $border-radius-base
+$alert-border-radius:         $border-radius-off;
 // $alert-link-font-weight:      bold
 
-// $alert-success-bg:            $state-success-bg
-// $alert-success-text:          $state-success-text
-// $alert-success-border:        $state-success-border
+$alert-success-bg:            $label-success-bg;
+$alert-success-text:          $label-color;
+$alert-success-border:        transparent;
 
-// $alert-info-bg:               $state-info-bg
-// $alert-info-text:             $state-info-text
-// $alert-info-border:           $state-info-border
+$alert-info-bg:               $gray;
+$alert-info-text:             $label-color;
+$alert-info-border:           transparent;
 
-// $alert-warning-bg:            $state-warning-bg
-// $alert-warning-text:          $state-warning-text
-// $alert-warning-border:        $state-warning-border
+$alert-warning-bg:            $label-warning-bg;
+$alert-warning-text:          $label-color;
+$alert-warning-border:        transparent;
 
-// $alert-danger-bg:             $state-danger-bg
-// $alert-danger-text:           $state-danger-text
-// $alert-danger-border:         $state-danger-border
+$alert-danger-bg:             $label-danger-bg;
+$alert-danger-text:           $label-color;
+$alert-danger-border:         transparent;
+
+
 
 
 //== Progress bars

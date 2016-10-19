@@ -161,7 +161,25 @@ h4 {
 
 // Alerts =================================================================
 .alert {
-  @include nav-softer-shadow;
+  @include no-bottom-border;
+  text-align: center;
+
+  * {
+    @include transition(.25s);
+  }
+
+  .close {
+    color: $gray-base;
+  }
+
+  .alert-link {
+    color: $gray-base;
+    opacity: .5;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
 }
 
 
