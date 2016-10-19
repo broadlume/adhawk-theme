@@ -58,7 +58,7 @@ gulp.task('watch', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
   gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
-gulp.task('ghpages', () => {
+gulp.task('ghpages', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
   return gulp.src('./dist/**/*').pipe(ghPages());
 });
 
