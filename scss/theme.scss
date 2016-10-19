@@ -201,9 +201,25 @@ h4 {
     @include transition(.25s);
   }
 
+  a:hover {
+    text-decoration: underline;
+  }
+
   .active {
-    font-weight: 800;
     border-width: 0 8px 0 0;
+    font-weight: 800;
   }
 }
 
+// Modals =================================================================
+
+.modal {
+
+  .modal-dialog {
+
+    .modal-content {
+      @include nav-soft-shadow;
+      border-radius: 0;
+    }
+  }
+}

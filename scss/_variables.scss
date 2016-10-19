@@ -615,10 +615,12 @@ $label-color:                 #fff;
 
 //** Background color of modal content area
 // $modal-content-bg:                             #fff
+
 //** Modal content border color
-// $modal-content-border-color:                   rgba(0,0,0,.2)
+$modal-content-border-color:                   transparent;
+
 //** Modal content border color **for IE8**
-// $modal-content-fallback-border-color:          #999
+$modal-content-fallback-border-color:          transparent;
 
 //** Modal backdrop background color
 // $modal-backdrop-bg:           #000
