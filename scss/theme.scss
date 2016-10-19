@@ -183,13 +183,27 @@ h4 {
 }
 
 
-//Jumbotron =================================================================
+// Jumbotron =================================================================
 .container,
 .container-fluid {
 
   .jumbotron {
     @include no-bottom-border;
     border-radius: 0;
+  }
+}
+
+
+// List Groups =================================================================
+
+.list-group {
+  .list-group-item {
+    @include transition(.25s);
+  }
+
+  .active {
+    font-weight: 800;
+    border-width: 0 8px 0 0;
   }
 }
 
