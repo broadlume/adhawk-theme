@@ -17,10 +17,25 @@
   box-shadow: 0 1px 2px $shadow-light;
 }
 
+@mixin nav-softer-shadow {
+  box-shadow: 0 2px 3px $shadow-lighter;
+}
+
+@mixin active-underline($color) {
+  background: $color;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 4px;
+  left: 50%;
+  margin-left: -50%;
+  position: absolute;
+  width: 100%;
+}
+
 // Buttons ====================================================================
 
 .btn {
-
   @include transition(.25s background-color);
   position: relative;
 
@@ -40,6 +55,7 @@
 }
 
 .btn-group-justified {
+
   .btn {
     border-right-width: 0;
 
@@ -48,18 +64,6 @@
     }
   }
 }
-
-// Tables =================================================================
-
-// .table {
-//   th {
-//     font-size: $font-size-large;
-//   }
-
-//   td {
-//     font-size: $font-size-large;
-//   }
-// }
 
 // Navbar =================================================================
 
@@ -85,18 +89,11 @@
       text-align: center;
     }
 
-    .navbar-nav > .active  > a {
+    .navbar-nav > .active > a {
       font-weight: 800;
 
       &::after {
-        background: $gray-base;
-        bottom: 0;
-        content: '';
-        display: block;
-        height: 4px;
-        left: 50%;
-        margin-left: -50%;
-        width: 100%;
+        @include active-underline($gray-base);
       }
     }
   }
@@ -118,6 +115,111 @@
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   font-weight: 100;
+}
+
+// Panels =================================================================
+
+.panel {
+  @include no-bottom-border;
+}
+
+.panel-default {
+
+  .panel-heading,
+  .panel-footer {
+    color: $gray;
+    font-weight: 300;
+  }
+}
+
+// Breadcrumbs =================================================================
+
+.breadcrumb {
+  @include no-bottom-border;
+  border-radius: 0;
+
+  .active {
+    font-weight: 800;
+  }
+}
+
+// Pagination =================================================================
+
+.pagination {
+  .active > a {
+    font-weight: 800;
+    position: relative;
+
+    &::after {
+      @include active-underline($brand-primary);
+    }
+  }
+}
+
+// Alerts =================================================================
+.alert {
+  @include no-bottom-border;
+  text-align: center;
+
+  * {
+    @include transition(.25s);
+  }
+
+  .close {
+    color: $gray-base;
+  }
+
+  .alert-link {
+    color: $gray-base;
+    opacity: .5;
+
+    &:hover {
+      opacity: .75;
+    }
+  }
+}
+
+
+// Jumbotron =================================================================
+.container,
+.container-fluid {
+
+  .jumbotron {
+    @include no-bottom-border;
+    border-radius: 0;
+  }
+}
+
+
+// List Groups =================================================================
+
+.list-group {
+  .list-group-item {
+    @include transition(.25s);
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .active {
+    border-width: 0 8px 0 0;
+    font-weight: 800;
+  }
+}
+
+// Modals =================================================================
+
+.modal {
+
+  .modal-dialog {
+
+    .modal-content {
+      @include nav-soft-shadow;
+      border-radius: 0;
+    }
+  }
 }
