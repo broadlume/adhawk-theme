@@ -23,7 +23,7 @@ gulp.task('lint', () => {
 });
 
 gulp.task('sass', () => {
-  return gulp.src(['./scss/theme.scss', './custom/custom.scss'])
+  return gulp.src(['./scss/_theme.scss', './custom/custom.scss', './scss/previewer.scss'])
     .pipe(sass({
       includePaths: ['./node_modules/bootstrap-sass/assets/stylesheets',
                      './node_modules/bourbon/app/assets/stylesheets'],
