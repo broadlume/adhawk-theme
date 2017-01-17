@@ -351,7 +351,6 @@
               <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
               <p class="text-info">Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
             </div>
-
           </div>
         </div>
 
@@ -377,6 +376,32 @@
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
                 <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
               </blockquote>
+            </div>
+          </div>
+        </div>
+
+        <!-- Monospace -->
+
+        <div class="row">
+          <div class="col-lg-12">
+            <h2 id="type-monospace">Monospace</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="bs-component">
+              <pre>
+const bsStylifyStatus = (s: UserStatus) => {
+  switch (s) {
+    case 'read':      return 'default';
+    case 'unread':    return 'default';
+    case 'accepted':  return 'success';
+    case 'rejected':  return 'danger';
+    case 'cancelled': return 'danger';
+    default:          throw new Error(`Status is not displayable: ${s}`);
+  };
+};
+              </pre>
             </div>
           </div>
         </div>
