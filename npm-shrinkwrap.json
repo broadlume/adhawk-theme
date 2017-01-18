@@ -1098,7 +1098,7 @@
       "resolved": "https://registry.npmjs.org/gulp-sass-lint/-/gulp-sass-lint-1.2.0.tgz"
     },
     "gulp-sourcemaps": {
-      "version": "1.7.2",
+      "version": "1.7.3",
       "dependencies": {
         "clone": {
           "version": "1.0.2"
