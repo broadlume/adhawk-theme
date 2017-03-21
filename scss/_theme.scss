@@ -67,14 +67,14 @@
 
   &.navbar-default {
     @include no-bottom-border;
-
+    background: $white;
     .navbar-nav > .active  > a {
       font-weight: 800;
       text-decoration: underline;
     }
   }
 
-  &.navbar-inverse {
+  &.navbar-secondary {
     @include nav-soft-shadow;
     @include nav-no-border;
 
@@ -118,15 +118,15 @@ h4 {
 
 // Panels =================================================================
 
-.panel {
+.card {
   @include no-bottom-border;
 }
 
-.panel-default {
+.card-default {
 
-  .panel-heading,
-  .panel-footer {
-    color: $gray;
+  .card-heading,
+  .card-footer {
+    color: $gray-light;
     font-weight: 300;
   }
 }
@@ -145,7 +145,7 @@ h4 {
 // Pagination =================================================================
 
 .pagination {
-  .active > a {
+  .page-link.active {
     font-weight: 800;
     position: relative;
 
