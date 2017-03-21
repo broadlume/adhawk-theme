@@ -22,6 +22,7 @@
     "node-bourbon": "^4.2.8",
     "bootstrap": "^4.0.0-alpha.6",
     "tether": "^1.4.0",
+    "glyphicons-halflings": "^1.9.0",
     "jquery": "^3.1.1"
   }
 }
