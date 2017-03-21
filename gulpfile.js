@@ -27,7 +27,7 @@ gulp.task('sass', () => {
   return gulp.src(['./scss/_theme.scss', './custom/custom.scss', './scss/previewer.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({
-      includePaths: ['./node_modules/bootstrap/scss/bootstrap',
+      includePaths: ['./node_modules/bootstrap/scss',
                      './node_modules/bourbon/app/assets/stylesheets',
                      './node_modules/glyphicons-halflings/scss'],
     }))
@@ -43,7 +43,8 @@ gulp.task('fonts', () => {
 
 gulp.task('js', () => {
   return gulp.src([
-    './node_modules/bootstrap/js/bootstrap.min.js',
+    './node_modules/bootstrap/dist/js/bootstrap.min.js',
+    './node_modules/tether/dist/js/tether.min.js',
     './node_modules/jquery/dist/jquery.min.js',
     './custom/*.js',
   ])
