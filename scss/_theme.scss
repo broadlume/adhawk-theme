@@ -2,7 +2,7 @@
 
 @mixin no-bottom-border {
   border-bottom-width: 0;
-  box-shadow: 0 1px $shadow-medium;
+  box-shadow: 0 1px $shadow-light;
 }
 
 @mixin nav-no-border {
@@ -10,11 +10,11 @@
 }
 
 @mixin nav-soft-shadow {
-  box-shadow: 0 1px 2px $shadow-light;
+  box-shadow: 0 1px 2px $shadow-lighter;
 }
 
 @mixin nav-softer-shadow {
-  box-shadow: 0 2px 3px $shadow-lighter;
+  box-shadow: 0 2px 3px $shadow-lightest;
 }
 
 @mixin active-underline($color) {
@@ -44,7 +44,7 @@
     &:not(.btn-link) {
       @include no-bottom-border;
 
-      box-shadow: inset 0 1px 2px $shadow-light;
+      box-shadow: inset 0 1px 2px $shadow-lighter;
       top: 1px;
     }
   }
@@ -89,7 +89,7 @@
       font-weight: 800;
 
       &::after {
-        @include active-underline($gray-base);
+        @include active-underline($black);
       }
     }
   }
@@ -165,11 +165,11 @@ h4 {
   }
 
   .close {
-    color: $gray-base;
+    color: $black;
   }
 
   .alert-link {
-    color: $gray-base;
+    color: $black;
     opacity: .5;
 
     &:hover {
