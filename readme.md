@@ -1,6 +1,6 @@
 # AdHawk Theme
 
-This is a repository for developing the AdHawk base Bootstrap theme.
+This is a repository for developing the AdHawk base Bootstrap v4 theme. You can preview the new v4 theme here: [adhawktheme-v4.surge.sh](http://adhawktheme-v4.surge.sh/)
 
 ## Developing
 
