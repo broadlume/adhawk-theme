@@ -1,13 +1,14 @@
 'use strict';
 
-const gulp        = require('gulp');
-const browserSync = require('browser-sync').create();
-const sass        = require('gulp-sass');
-const sourcemaps  = require('gulp-sourcemaps');
-const ghPages     = require('gulp-gh-pages');
-const openUrl     = require('openurl');
-const rimraf      = require('rimraf');
-const sassLint    = require('gulp-sass-lint');
+const gulp          = require('gulp');
+const browserSync   = require('browser-sync').create();
+const sass          = require('gulp-sass');
+const sourcemaps    = require('gulp-sourcemaps');
+const ghPages       = require('gulp-gh-pages');
+const openUrl       = require('openurl');
+const rimraf        = require('rimraf');
+const sassLint      = require('gulp-sass-lint');
+const autoprefixer  = require('gulp-autoprefixer');
 
 gulp.task('clean', (cb) => {
   return rimraf('./dist', cb);
@@ -30,6 +31,11 @@ gulp.task('sass', () => {
       includePaths: ['./node_modules/bootstrap/scss',
                      './node_modules/bourbon/app/assets/stylesheets',
                      './node_modules/glyphicons-halflings/scss'],
+    }))
+    .pipe(autoprefixer({
+      browsers: [
+        'Chrome >= 35', 'Firefox >= 38', 'Edge >= 12', 'Explorer >= 10', 'iOS >= 8', 'Safari >= 8', 'Android 2.3', 'Android >= 4', 'Opera >= 12'
+      ]
     }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./dist/css'))
