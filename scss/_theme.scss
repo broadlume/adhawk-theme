@@ -103,6 +103,13 @@
   }
 }
 
+// Badges =================================================================
+
+.badge-inverse {
+  @include badge-variant($white);
+  color: $body-color;
+}
+
 // Dropdowns =================================================================
 
 .dropdown-menu {
