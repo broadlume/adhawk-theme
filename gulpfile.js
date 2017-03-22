@@ -60,7 +60,7 @@ gulp.task('watch', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
   }, () => openUrl.open('http://local.tryadhawk.com:3030'));
 
   gulp.watch('./scss/*.scss', ['sass', 'lint']);
-  gulp.watch('./index.html').on('change', browserSync.reload);
+  gulp.watch('./index.html', ['html']).on('change', browserSync.reload);
 });
 
 gulp.task('ghpages', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
