@@ -114,7 +114,7 @@
 
 .dropdown-menu-arrow {
   left: 50%;
-  margin-top: $popover-arrow-width;
+  margin-top: $nav-link-padding;
   transform: translate(-50%, 0);
 
   &::before {
