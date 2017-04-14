@@ -112,42 +112,43 @@
 
 // Dropdown menu arrow =================================================================
 
-
-
-.dropdown-menu{
+.dropdown-menu {
+  left: 50%;
   margin-top: $popover-arrow-width;
+  transform: translate(-50%, 0);
 
   &::before {
-    content: "";
     border-width: $popover-arrow-outer-width;
+    content: '';
   }
+
   &::after {
-    content: "";
     border-width: $popover-arrow-width;
+    content: '';
   }
 
   &::before,
   &::after {
-    position: absolute;
-    display: block;
-    width: 0;
-    height: 0;
     border-color: transparent;
     border-style: solid;
-    left: 50%;
     border-top-width: 0;
+    display: block;
+    height: 0;
+    left: 50%;
+    position: absolute;
+    width: 0;
   }
 
   &::before {
-    top: -$popover-arrow-outer-width;
-    margin-left: -$popover-arrow-outer-width;
     border-bottom-color: $popover-arrow-outer-color;
+    margin-left: -$popover-arrow-outer-width;
+    top: -$popover-arrow-outer-width;
   }
 
   &::after {
-    top: -($popover-arrow-outer-width - 1);
-    margin-left: -$popover-arrow-width;
     border-bottom-color: $popover-title-bg;
+    margin-left: -$popover-arrow-width;
+    top: -($popover-arrow-outer-width - 1);
   }
 }
 
