@@ -60,35 +60,35 @@ $enable-shadows:            true;
 // // variables. Mostly focused on spacing.
 // // You can add more entries to the $spacers map, should you need more variation.
 //
-// $spacer:   1rem !default;
-// $spacer-x: $spacer !default;
-// $spacer-y: $spacer !default;
-// $spacers: (
-//   0: (
-//     x: 0,
-//     y: 0
-//   ),
-//   1: (
-//     x: ($spacer-x * .25),
-//     y: ($spacer-y * .25)
-//   ),
-//   2: (
-//     x: ($spacer-x * .5),
-//     y: ($spacer-y * .5)
-//   ),
-//   3: (
-//     x: $spacer-x,
-//     y: $spacer-y
-//   ),
-//   4: (
-//     x: ($spacer-x * 1.5),
-//     y: ($spacer-y * 1.5)
-//   ),
-//   5: (
-//     x: ($spacer-x * 3),
-//     y: ($spacer-y * 3)
-//   )
-// ) !default;
+$spacer:   1rem !default;
+$spacer-x: $spacer !default;
+$spacer-y: $spacer !default;
+$spacers: (
+  0: (
+    x: 0,
+    y: 0
+  ),
+  1: (
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  ),
+  2: (
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  ),
+  3: (
+    x: $spacer-x,
+    y: $spacer-y
+  ),
+  4: (
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  ),
+  5: (
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  )
+);
 // $border-width: 1px !default;
 //
 // // This variable affects the `.h-*` and `.w-*` classes.
@@ -525,7 +525,7 @@ $dropdown-divider-bg:            $gray-lightest;
 //
 $navbar-border-radius:              0;
 // $navbar-padding-x:                  $spacer !default;
-// $navbar-padding-y:                  ($spacer / 2) !default;
+$navbar-padding-y:                  0;
 //
 // $navbar-brand-padding-y:            .25rem !default;
 //
@@ -552,7 +552,7 @@ $navbar-light-active-color:         rgba($black, .9);
 //
 // $nav-item-margin:               .2rem !default;
 // $nav-item-inline-spacer:        1rem !default;
-// $nav-link-padding:              .5em 1em !default;
+$nav-link-padding:              $spacer-y $spacer-x;
 $nav-link-hover-bg:             $gray-lightest;
 $nav-disabled-link-color:       $gray-lighter;
 //
