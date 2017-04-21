@@ -92,7 +92,18 @@
 
     .navbar-nav .active > .nav-link {
       font-weight: 800;
+    }
+  }
 
+  @include media-breakpoint-up(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .nav-link {
+      padding: $spacer-y $spacer-x;
+    }
+
+    .navbar-nav .active > .nav-link {
       &::after {
         @include active-underline($black);
       }
