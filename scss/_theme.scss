@@ -76,7 +76,7 @@
     @include no-bottom-border;
     background: $white;
 
-    .navbar-nav > .active > a {
+    .navbar-nav .active > .nav-link {
       font-weight: 800;
       text-decoration: underline;
     }
@@ -86,14 +86,11 @@
     @include nav-soft-shadow;
     @include nav-no-border;
 
-    .navbar-nav > li > a {
-      display: block;
-      margin: auto;
+    .nav-link {
       position: relative;
-      text-align: center;
     }
 
-    .navbar-nav > .active > a {
+    .navbar-nav .active > .nav-link {
       font-weight: 800;
 
       &::after {
