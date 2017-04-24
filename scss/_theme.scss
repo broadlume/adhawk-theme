@@ -104,7 +104,7 @@
     }
 
     .navbar-nav .active > .nav-link {
-      &::after {
+      &::before {
         @include active-underline($black);
       }
     }
