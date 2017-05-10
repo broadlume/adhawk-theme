@@ -15,7 +15,7 @@ $orange:   #f39c12;
 // $yellow:   #ffd500 !default;
 $shamrock: #1ccb8d;
 $green:    #2ecc71;
-// $blue:     #0275d8 !default;
+$blue:     #4a90e2;
 // $teal:     #5bc0de !default;
 // $pink:     #ff5b77 !default;
 // $purple:   #613d7c !default;
@@ -30,7 +30,7 @@ $gray-lightest:             lighten($black, 95%);
 // Reassign color vars to semantic color scheme
 $brand-primary:             $shamrock;
 $brand-success:             $green !default;
-$brand-info:                $gray-lighter;
+$brand-info:                $blue;
 $brand-warning:             $orange !default;
 $brand-danger:              $red !default;
 $brand-inverse:             $gray-dark !default;
