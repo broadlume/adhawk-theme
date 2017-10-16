@@ -66,11 +66,22 @@
 .navbar {
 
   &.navbar-default {
-    @include no-bottom-border;
+    @include nav-soft-shadow;
+    @include nav-no-border;
+
+    .navbar-nav > li > a {
+      font-weight: 300;
+      font-size: 20px;
+      padding: 19px 12px;
+    }
 
     .navbar-nav > .active  > a {
-      font-weight: 800;
-      text-decoration: underline;
+      font-weight: 700;
+      color: #212121;
+
+      &::after {
+        @include active-underline($gray-base);
+      }
     }
   }
 
@@ -79,6 +90,9 @@
     @include nav-no-border;
 
     .navbar-nav > li > a {
+      padding: 19px 12px;
+      font-weight: 300;
+      font-size: 20px;
       display: block;
       margin: auto;
       position: relative;
