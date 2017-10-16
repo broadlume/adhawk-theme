@@ -195,7 +195,7 @@ $table-bg-accent:               #fafafa;
 //##
 
 //** `<input>` background color
-// $input-bg:                       #fff
+// $input-bg:                       #EEF3F3
 //** `<input disabled>` background color
 // $input-bg-disabled:              $gray-lighter
 
@@ -229,7 +229,7 @@ $table-bg-accent:               #fafafa;
 //** `.form-group` margin
 // $form-group-margin-bottom:       15px
 
-$legend-color:                   $gray;
+$legend-color:                   #37474F;
 $legend-border-color:            $gray-light;
 
 //** Background color for textual input addons
@@ -784,8 +784,8 @@ $panel-primary-border:        darken($brand-primary, 7%);
 //
 //##
 
-$well-bg:                     $gray-lighter;
-$well-border:                 darken($well-bg, 10%);
+$well-bg:                     #fff;
+$well-border:                 none;
 
 
 //== Badges
