@@ -195,7 +195,7 @@ $table-bg-accent:               #fafafa;
 //##
 
 //** `<input>` background color
-// $input-bg:                       #EEF3F3
+$input-bg:                       #EEF3F3;
 //** `<input disabled>` background color
 // $input-bg-disabled:              $gray-lighter
 
@@ -214,10 +214,11 @@ $table-bg-accent:               #fafafa;
 // $input-border-radius-small:      $border-radius-small
 
 //** Border color for inputs on focus
-// $input-border-focus:             #66afe9
+$input-border-focus:             #66afe9;
+$input-box-shadow-focus:		 none;
 
 //** Placeholder text color
-// $input-color-placeholder:        #999
+$input-color-placeholder:        #999;
 
 //** Default `.form-control` height
 // $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2)
