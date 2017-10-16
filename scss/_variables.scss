@@ -16,11 +16,11 @@ $gray:                   #37474F; //
 $gray-light:             #B0BEC5; //
 $gray-lighter:           #CFD8DC; //
 
-$brand-primary:         #1ccb8d;
-$brand-success:         #2ecc71;
+$brand-primary:         #1CCB8D;
+$brand-success:         #00796B;
 $brand-info:            $gray-light;
 $brand-warning:         #f39c12;
-$brand-danger:          #f00;
+$brand-danger:          #EA4335;
 
 //## Shadow colors for use with box shadows
 
@@ -166,9 +166,9 @@ $table-bg-accent:               #fafafa;
 // $btn-primary-bg:                 $brand-primary
 // $btn-primary-border:             darken($btn-primary-bg, 5%)
 
-// $btn-success-color:              #fff
-// $btn-success-bg:                 $brand-success
-// $btn-success-border:             darken($btn-success-bg, 5%)
+$btn-success-color:              	#fff
+$btn-success-bg:                 	#00796B
+$btn-success-border:             	#00796B
 
 // $btn-info-color:                 #fff
 // $btn-info-bg:                    $brand-info
@@ -216,6 +216,7 @@ $input-bg:                       #EEF3F3;
 //** Border color for inputs on focus
 $input-border-focus:             #66afe9;
 $input-box-shadow-focus:		 none;
+$input-background-focus:         #fff;
 
 //** Placeholder text color
 $input-color-placeholder:        #999;
@@ -511,9 +512,9 @@ $jumbotron-bg:                   #fff;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d;
-$state-success-bg:               #dff0d8;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%);
+$state-success-text:             $brand-success;
+$state-success-bg:               transparent;
+$state-success-border:           $brand-success;
 
 $state-info-text:                #31708f;
 $state-info-bg:                  #d9edf7;
@@ -523,9 +524,9 @@ $state-warning-text:             #8a6d3b;
 $state-warning-bg:               #fcf8e3;
 $state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%);
 
-$state-danger-text:              #a94442;
-$state-danger-bg:                #f2dede;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%);
+$state-danger-text:              #EA4335;
+$state-danger-bg:                transparent;
+$state-danger-border:            #EA4335;
 
 
 //== Tooltips
