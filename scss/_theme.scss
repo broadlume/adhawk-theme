@@ -1,8 +1,8 @@
 // Shared Styles ====================================================================
 
 @mixin no-bottom-border {
-  border-bottom-width: 0;
-  box-shadow: 0 1px $shadow-medium;
+  // border-bottom-width: 0;
+  // box-shadow: 0 1px $shadow-medium;
 }
 
 @mixin nav-no-border {
@@ -37,7 +37,7 @@
 
 
   &:not(.btn-link) {
-    @include no-bottom-border;
+    border: 1px solid transparent;
   }
 
   &:active {
@@ -198,7 +198,6 @@ h4 {
 .container-fluid {
 
   .jumbotron {
-    @include no-bottom-border;
     border-radius: 0;
   }
 }

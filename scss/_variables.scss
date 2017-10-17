@@ -157,11 +157,11 @@ $table-bg-accent:               #fafafa;
 //
 //## For each of Bootstrap's buttons, define text, background and border color.
 
-// $btn-font-weight:                normal
+$btn-font-weight:                	700;
 
-// $btn-default-color:              #333
-// $btn-default-bg:                 #fff
-// $btn-default-border:             #ccc
+$btn-default-color:              	#455A64;
+$btn-default-bg:                 	#ECEFF1;
+$btn-default-border:             	rgba(0,0,0,0.15);
 
 // $btn-primary-color:              #fff
 // $btn-primary-bg:                 $brand-primary
