@@ -159,9 +159,11 @@ $table-bg-accent:               #fafafa;
 
 $btn-font-weight:                	700;
 
-$btn-default-color:              	#455A64;
-$btn-default-bg:                 	#ECEFF1;
-$btn-default-border:             	rgba(0,0,0,0.15);
+$btn-default-color:              	#fff;
+$btn-default-bg:                 	#455A64;
+
+$btn-secondary-color:              	#015E54;
+$btn-secondary-bg:                 	#B9F6CA;
 
 // $btn-primary-color:              #fff
 // $btn-primary-bg:                 $brand-primary
@@ -171,8 +173,8 @@ $btn-success-color:              	#fff;
 $btn-success-bg:                 	#00796B;
 $btn-success-border:             	#00796B;
 
-// $btn-info-color:                 #fff
-// $btn-info-bg:                    $brand-info
+$btn-info-color:                 	#455A64;
+$btn-info-bg:                    	#ECEFF1;
 // $btn-info-border:                darken($btn-info-bg, 5%)
 
 // $btn-warning-color:              #fff
