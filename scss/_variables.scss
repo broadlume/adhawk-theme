@@ -519,9 +519,9 @@ $state-success-text:             $brand-success;
 $state-success-bg:               transparent;
 $state-success-border:           $brand-success;
 
-$state-info-text:                #31708f;
-$state-info-bg:                  #d9edf7;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
+$state-info-text:                #37474F;
+$state-info-bg:                  #0091EA;
+// $state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%);
 
 $state-warning-text:             #8a6d3b;
 $state-warning-bg:               #fcf8e3;
