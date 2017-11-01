@@ -116,7 +116,7 @@ $padding-xs-horizontal:     5px;
 $line-height-large:         1.3333333; // extra decimals for Win 8.1 Chrome
 $line-height-small:         1.5;
 
-$border-radius-off: 				0;
+$border-radius-off: 		0;
 $border-radius-base:        2px;
 $border-radius-large:       4px;
 $border-radius-small:       2px;
@@ -144,7 +144,7 @@ $border-radius-small:       2px;
 //** Default background color used for all tables.
 $table-bg:                      #fff;
 //** Background color used for `.table-striped`.
-$table-bg-accent:               #fafafa;
+$table-bg-accent:               #eceff1;
 //** Background color used for `.table-hover`.
 // $table-bg-hover:                #f5f5f5
 // $table-bg-active:               $table-bg-hover
@@ -159,8 +159,8 @@ $table-bg-accent:               #fafafa;
 
 $btn-font-weight:                	700;
 
-$btn-default-color:              	#fff;
-$btn-default-bg:                 	#455A64;
+$btn-default-color:              	#455a64;
+$btn-default-bg:                 	#eef3f3;
 
 $btn-secondary-color:              	#015E54;
 $btn-secondary-bg:                 	#B9F6CA;
@@ -590,7 +590,7 @@ $label-primary-bg:            $brand-primary;
 //** Success label background color
 $label-success-bg:            $brand-success;
 //** Info label background color
-$label-info-bg:               $brand-info;
+$label-info-bg:               $gray;
 //** Warning label background color
 $label-warning-bg:            $brand-warning;
 //** Danger label background color
