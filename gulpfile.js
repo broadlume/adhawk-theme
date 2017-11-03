@@ -4,7 +4,7 @@ const gulp        = require('gulp');
 const browserSync = require('browser-sync').create();
 const sass        = require('gulp-sass');
 const ghPages     = require('gulp-gh-pages');
-const openUrl     = require('openurl');
+const opn         = require('opn');
 const rimraf      = require('rimraf');
 const sassLint    = require('gulp-sass-lint');
 
@@ -52,9 +52,9 @@ gulp.task('watch', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
     port: 3030,
     host: 'http://local.tryadhawk.com',
     server: './dist',
-  }, () => openUrl.open('http://local.tryadhawk.com:3030'));
+  }, () => opn('http://local.tryadhawk.com:3030'));
 
-  gulp.watch('./scss/*.scss', ['sass', 'lint']);
+  gulp.watch('./scss/**/*.scss', ['sass', 'lint']);
   gulp.watch('./index.html').on('change', browserSync.reload);
 });
 
@@ -63,7 +63,7 @@ gulp.task('ghpages', ['html', 'sass', 'fonts', 'js', 'lint'], () => {
 });
 
 gulp.task('deploy', ['ghpages'], () => {
-  openUrl.open('http://adhawk.github.io/adhawk-theme');
+  opn.open('http://adhawk.github.io/adhawk-theme');
 });
 
 gulp.task('default', ['watch']);
