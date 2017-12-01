@@ -21,6 +21,7 @@ $brand-success: #00796b;
 $brand-info: $gray-light;
 $brand-warning: #f39c12;
 $brand-danger: #ea4335;
+$san-juan: #455a64;
 
 //## Shadow colors for use with box shadows
 
@@ -397,15 +398,20 @@ $navbar-default-link-active-bg: $navbar-default-bg;
 
 //=== Inverted navbar
 // Reset inverted navbar basics
-$navbar-inverse-color: lighten($gray-light, 15%);
-$navbar-inverse-bg: #f5f5f5;
-$navbar-inverse-border: transparent;
+$navbar-inverse-color: #fff;
+$navbar-inverse-bg: $san-juan;
+$navbar-inverse-border: darken($navbar-inverse-bg, 10%) !default;
+
+// Inverted navbar toggle
+$navbar-inverse-toggle-hover-bg: darken($navbar-inverse-bg, 5%);
+$navbar-inverse-toggle-icon-bar-bg: $gray-lighter;
+$navbar-inverse-toggle-border-color: $gray-light;
 
 // Inverted navbar links
-$navbar-inverse-link-color: $gray;
-$navbar-inverse-link-hover-color: $gray-dark;
+$navbar-inverse-link-color: $gray-light;
+$navbar-inverse-link-hover-color: #fff;
 $navbar-inverse-link-hover-bg: transparent;
-$navbar-inverse-link-active-color: #000;
+$navbar-inverse-link-active-color: #fff;
 $navbar-inverse-link-active-bg: transparent;
 // $navbar-inverse-link-disabled-color:        #444
 // $navbar-inverse-link-disabled-bg:           transparent
@@ -414,11 +420,6 @@ $navbar-inverse-link-active-bg: transparent;
 // $navbar-inverse-brand-color:                $navbar-inverse-link-color
 // $navbar-inverse-brand-hover-color:          #fff
 // $navbar-inverse-brand-hover-bg:             transparent
-
-// Inverted navbar toggle
-$navbar-inverse-toggle-hover-bg: $gray-light;
-$navbar-inverse-toggle-icon-bar-bg: $gray-lighter;
-$navbar-inverse-toggle-border-color: $gray-light;
 
 //== Navs
 //

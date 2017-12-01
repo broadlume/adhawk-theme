@@ -1,4 +1,5 @@
 // Shared Styles ====================================================================
+@import "./variables";
 
 @mixin no-bottom-border {
   // border-bottom-width: 0;
@@ -18,15 +19,17 @@
 }
 
 @mixin active-underline($color) {
-  background: $color;
-  bottom: 0;
-  content: '';
-  display: block;
-  height: 4px;
-  left: 50%;
-  margin-left: -50%;
-  position: absolute;
-  width: 100%;
+  @media (min-width: $screen-md-min) {
+    background: $color;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 50%;
+    margin-left: -50%;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 // Buttons ====================================================================
@@ -62,45 +65,29 @@
 // Navbar =================================================================
 
 .navbar {
+  @include nav-soft-shadow;
+  @include nav-no-border;
+
+  .navbar-nav > li > a {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .navbar-nav > .active > a {
+    font-weight: 700;
+  }
+
   &.navbar-default {
-    @include nav-soft-shadow;
-    @include nav-no-border;
-
-    .navbar-nav > li > a {
-      font-weight: 300;
-      font-size: 20px;
-      padding: 19px 12px;
-    }
-
     .navbar-nav > .active > a {
-      font-weight: 700;
-      color: #212121;
-
       &::after {
-        @include active-underline($gray-base);
+        @include active-underline($navbar-default-link-active-color);
       }
     }
   }
 
   &.navbar-inverse {
-    @include nav-soft-shadow;
-    @include nav-no-border;
-
-    .navbar-nav > li > a {
-      padding: 19px 12px;
-      font-weight: 300;
-      font-size: 20px;
-      display: block;
-      margin: auto;
-      position: relative;
-      text-align: center;
-    }
-
     .navbar-nav > .active > a {
-      font-weight: 800;
-
       &::after {
-        @include active-underline($gray-base);
+        @include active-underline($navbar-inverse-link-active-color);
       }
     }
   }
