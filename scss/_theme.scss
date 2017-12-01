@@ -35,7 +35,6 @@
   @include transition(.25s background-color);
   position: relative;
 
-
   &:not(.btn-link) {
     border: 1px solid transparent;
   }
@@ -51,7 +50,6 @@
 }
 
 .btn-group-justified {
-
   .btn {
     border-right-width: 0;
 
@@ -64,7 +62,6 @@
 // Navbar =================================================================
 
 .navbar {
-
   &.navbar-default {
     @include nav-soft-shadow;
     @include nav-no-border;
@@ -75,7 +72,7 @@
       padding: 19px 12px;
     }
 
-    .navbar-nav > .active  > a {
+    .navbar-nav > .active > a {
       font-weight: 700;
       color: #212121;
 
@@ -136,12 +133,14 @@ h4 {
   @include no-bottom-border;
 }
 
-.panel-default {
-
+.panel-primary,
+.panel-danger,
+.panel-warning,
+.panel-success,
+.panel-info {
   .panel-heading,
-  .panel-footer {
-    color: $gray;
-    font-weight: 300;
+  .panel-title {
+    font-weight: 600;
   }
 }
 
@@ -171,37 +170,18 @@ h4 {
 
 // Alerts =================================================================
 .alert {
-  @include no-bottom-border;
-  text-align: center;
-
   * {
     @include transition(.25s);
   }
-
-  .close {
-    color: $gray-base;
-  }
-
-  .alert-link {
-    color: $gray-base;
-    opacity: .5;
-
-    &:hover {
-      opacity: .75;
-    }
-  }
 }
-
 
 // Jumbotron =================================================================
 .container,
 .container-fluid {
-
   .jumbotron {
     border-radius: 0;
   }
 }
-
 
 // List Groups =================================================================
 
@@ -225,9 +205,7 @@ h4 {
 // Modals =================================================================
 
 .modal {
-
   .modal-dialog {
-
     .modal-content {
       @include nav-soft-shadow;
       border-radius: 0;
