@@ -498,20 +498,25 @@ $jumbotron-bg: #fff;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
+$state-primary-bg: $brand-primary;
+$state-primary-text: #fff;
+$state-primary-border: #fff;
+
 $state-success-bg: $brand-success;
 $state-success-text: #fff;
-$state-success-border: $brand-success;
+$state-success-border: #fff;
 
 $state-info-bg: $gray-blue;
 $state-info-text: #fff;
+$state-info-border: #fff;
 
 $state-warning-text: #fff;
 $state-warning-bg: $brand-warning;
-$state-warning-border: $brand-warning;
+$state-warning-border: #fff;
 
 $state-danger-text: #fff;
 $state-danger-bg: $brand-danger;
-$state-danger-border: $brand-danger;
+$state-danger-border: #fff;
 
 //== Tooltips
 //

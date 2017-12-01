@@ -130,7 +130,8 @@ h4 {
 // Panels =================================================================
 
 .panel {
-  @include no-bottom-border;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  border: none;
 }
 
 .panel-primary,
@@ -140,7 +141,7 @@ h4 {
 .panel-info {
   .panel-heading,
   .panel-title {
-    font-weight: 600;
+    font-weight: 400;
   }
 }
 
