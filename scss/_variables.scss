@@ -499,25 +499,25 @@ $jumbotron-bg: #fff;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-primary-bg: $brand-primary;
-$state-primary-text: #fff;
-$state-primary-border: #fff;
+// $state-primary-bg: $brand-primary;
+// $state-primary-text: #fff;
+// $state-primary-border: #fff;
 
 $state-success-bg: $brand-success;
-$state-success-text: #fff;
-$state-success-border: #fff;
+$state-success-text: $brand-success;
+$state-success-border: $brand-success;
 
 $state-info-bg: $gray-blue;
-$state-info-text: #fff;
-$state-info-border: #fff;
+$state-info-text: $gray-blue;
+$state-info-border: $gray-blue;
 
-$state-warning-text: #fff;
+$state-warning-text: $brand-warning;
 $state-warning-bg: $brand-warning;
-$state-warning-border: #fff;
+$state-warning-border: $brand-warning;
 
-$state-danger-text: #fff;
+$state-danger-text: $brand-danger;
 $state-danger-bg: $brand-danger;
-$state-danger-border: #fff;
+$state-danger-border: $brand-danger;
 
 //== Tooltips
 //
@@ -670,9 +670,6 @@ $alert-danger-border: transparent;
 //
 //##
 
-//** Background color on `.list-group-item`
-$list-group-bg: $navbar-inverse-bg;
-
 //** `.list-group-item` border color
 $list-group-border: transparent;
 
@@ -727,21 +724,21 @@ $panel-border-radius: $border-radius-large;
 // $panel-primary-border: darken($brand-primary, 7%);
 // $panel-primary-heading-bg:    $brand-primary
 
-// $panel-success-text:          $state-success-text
-// $panel-success-border:        $state-success-border
-// $panel-success-heading-bg:    $state-success-bg
+$panel-success-text: #fff;
+$panel-success-border: #fff;
+$panel-success-heading-bg: $state-success-bg;
 
-// $panel-info-text:             $state-info-text
-// $panel-info-border:           $state-info-border
-// $panel-info-heading-bg:       $state-info-bg
+$panel-info-text: #fff;
+$panel-info-border: #fff;
+$panel-info-heading-bg: $state-info-bg;
 
-// $panel-warning-text:          $state-warning-text
-// $panel-warning-border:        $state-warning-border
-// $panel-warning-heading-bg:    $state-warning-bg
+$panel-warning-text: #fff;
+$panel-warning-border: #fff;
+$panel-warning-heading-bg: $state-warning-bg;
 
-// $panel-danger-text:           $state-danger-text
-// $panel-danger-border:         $state-danger-border
-// $panel-danger-heading-bg:     $state-danger-bg
+$panel-danger-text: #fff;
+$panel-danger-border: #fff;
+$panel-danger-heading-bg: $state-danger-bg;
 
 //== Thumbnails
 //
