@@ -154,15 +154,21 @@ h4 {
   .panel-heading,
   .panel-title {
     font-weight: 400;
-    padding: 8px
-
     a {
       display: block;
       cursor: pointer;
     }
+    a:after {
+      font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+      content:"\e259";
+      float: right;
+    }
+    a.collapsed:after {
+      content:"\e257";
+    }
   }
-
 }
+
 
 // Breadcrumbs =================================================================
 
