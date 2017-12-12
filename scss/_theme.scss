@@ -155,7 +155,13 @@ h4 {
   .panel-title {
     font-weight: 400;
     padding: 8px
+
+    a {
+      display: block;
+      cursor: pointer;
+    }
   }
+
 }
 
 // Breadcrumbs =================================================================
