@@ -159,12 +159,14 @@ h4 {
       cursor: pointer;
     }
     a:after {
-      font-family: 'Glyphicons Halflings';  /* essential for enabling glyphicon */
+      font-family: 'Glyphicons Halflings';
       content:"\e259";
       float: right;
+      transition: .4s
     }
     a.collapsed:after {
-      content:"\e257";
+      transform: rotate(90deg);
+      transition: .4s
     }
   }
 }
