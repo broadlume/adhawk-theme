@@ -154,9 +154,23 @@ h4 {
   .panel-heading,
   .panel-title {
     font-weight: 400;
-    padding: 8px
+    a {
+      display: block;
+      cursor: pointer;
+    }
+    a:after {
+      font-family: 'Glyphicons Halflings';
+      content:"\e259";
+      float: right;
+      transition: .4s
+    }
+    a.collapsed:after {
+      transform: rotate(90deg);
+      transition: .4s
+    }
   }
 }
+
 
 // Breadcrumbs =================================================================
 
