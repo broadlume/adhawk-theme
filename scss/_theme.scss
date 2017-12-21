@@ -112,14 +112,6 @@
       }
     }
   }
-
-  &.navbar-inverse {
-    .navbar-nav > .active > a {
-      &::after {
-        @include active-underline($navbar-inverse-link-active-color);
-      }
-    }
-  }
 }
 
 // Dropdowns =================================================================
