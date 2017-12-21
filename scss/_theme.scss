@@ -37,6 +37,7 @@
 .btn {
   @include transition(.25s background-color);
   position: relative;
+  box-shadow:none;
 
   &:not(.btn-link) {
     border: 1px solid transparent;
@@ -250,7 +251,6 @@ h4 {
   font-size: 18px;
   font-weight: 600px;
   box-shadow: none;
-
 }
 #focusedInput {
   background-color: #ffffff;
