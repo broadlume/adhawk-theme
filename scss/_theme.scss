@@ -37,6 +37,7 @@
 .btn {
   @include transition(.25s background-color);
   position: relative;
+  box-shadow:none;
 
   &:not(.btn-link) {
     border: 1px solid transparent;
