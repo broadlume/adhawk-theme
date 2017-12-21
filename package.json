@@ -1,6 +1,6 @@
 {
   "name": "adhawk-theme",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "SCSS theme for AdHawk",
   "repository": "https://github.com/adhawk/adhawk-theme",
   "scripts": {
