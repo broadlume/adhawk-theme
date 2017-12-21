@@ -60,10 +60,13 @@
   padding: 8px;
 }
 
-.btn-group > .active {
-  background: #37474F;
-  color: #ffffff;
-  font-weight: 700;
+.btn-toolbar,
+.btn-group {
+  .active {
+    background: #37474F;
+    color: #ffffff;
+    font-weight: 700;
+  }
 }
 
 .btn-group {
@@ -252,4 +255,12 @@ h4 {
 
 .form-control {
   height: 36px;
+  font-size: 18px;
+  font-weight: 600px;
+  box-shadow: none;
 }
+#focusedInput {
+  background-color: #ffffff;
+  border: solid 1px #263238;
+}
+
