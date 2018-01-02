@@ -13,7 +13,10 @@ gulp.task("clean", cb => {
 });
 
 gulp.task("html", () => {
-  return gulp.src("./*.html").pipe(gulp.dest("./dist"));
+  return gulp
+    .src("./*.html")
+    .pipe(gulp.dest("./dist"))
+    .pipe(browserSync.stream());
 });
 
 gulp.task("lint", () => {
@@ -69,7 +72,7 @@ gulp.task("watch", ["html", "sass", "fonts", "js", "lint"], () => {
   );
 
   gulp.watch("./scss/**/*.scss", ["sass", "lint"]);
-  gulp.watch("./index.html").on("change", browserSync.reload);
+  gulp.watch("./*.html", ["html"]);
 });
 
 gulp.task("ghpages", ["html", "sass", "fonts", "js", "lint"], () => {
