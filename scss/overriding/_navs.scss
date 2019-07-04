@@ -1,0 +1,23 @@
+// Pills
+// -------------------------
+.nav-pills {
+  > li {
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        font-weight: 700;
+        border-radius: 2px;
+        background-color: $gray;
+      }
+    }
+  }
+}
+
+.nav-tabs-justified {
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    background: #37474F;
+  }
+}

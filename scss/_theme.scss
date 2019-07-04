@@ -1,8 +1,9 @@
 // Shared Styles ====================================================================
+@import "./variables";
 
 @mixin no-bottom-border {
-  border-bottom-width: 0;
-  box-shadow: 0 1px $shadow-medium;
+  // border-bottom-width: 0;
+  // box-shadow: 0 1px $shadow-medium;
 }
 
 @mixin nav-no-border {
@@ -10,23 +11,25 @@
 }
 
 @mixin nav-soft-shadow {
-  box-shadow: 0 1px 2px $shadow-light;
+  // box-shadow: 0 1px 2px $shadow-light;
 }
 
 @mixin nav-softer-shadow {
-  box-shadow: 0 2px 3px $shadow-lighter;
+  // box-shadow: 0 2px 3px $shadow-lighter;
 }
 
 @mixin active-underline($color) {
-  background: $color;
-  bottom: 0;
-  content: '';
-  display: block;
-  height: 4px;
-  left: 50%;
-  margin-left: -50%;
-  position: absolute;
-  width: 100%;
+  @media (min-width: $screen-md-min) {
+    background: $color;
+    bottom: 0;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 50%;
+    margin-left: -50%;
+    position: absolute;
+    width: 100%;
+  }
 }
 
 // Buttons ====================================================================
@@ -34,29 +37,55 @@
 .btn {
   @include transition(.25s background-color);
   position: relative;
-
+  box-shadow: none;
 
   &:not(.btn-link) {
-    @include no-bottom-border;
+    border: 1px solid transparent;
   }
 
   &:active {
     &:not(.btn-link) {
-      @include no-bottom-border;
+      // @include no-bottom-border;
 
-      box-shadow: inset 0 1px 2px $shadow-light;
-      top: 1px;
+      // box-shadow: inset 0 1px 2px $shadow-light;
+      // top: 1px;
     }
   }
 }
 
-.btn-group-justified {
+.btn-group > .btn {
+  font-weight: 300;
+  border: 1px solid rgba(38, 50, 56, 0.15);
+  box-shadow: none;
+  max-height: 36px;
+  padding: 8px;
+}
 
+.btn-toolbar,
+.btn-group {
+  .active {
+    background: #37474f;
+    color: #ffffff;
+    font-weight: 700;
+  }
+}
+
+.btn-group {
+  .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    right: -1px;
+  }
+  &:last-child {
+    left: -1px;
+  }
+}
+
+.btn-group-justified {
   .btn {
-    border-right-width: 0;
+    // border-right-width: 0;
 
     &:last-child {
-      border-right-width: 1px;
+      // border-right-width: 1px;
+      left: -1px;
     }
   }
 }
@@ -64,32 +93,21 @@
 // Navbar =================================================================
 
 .navbar {
+  @include nav-soft-shadow;
+  @include nav-no-border;
 
-  &.navbar-default {
-    @include no-bottom-border;
-
-    .navbar-nav > .active  > a {
-      font-weight: 800;
-      text-decoration: underline;
-    }
+  .navbar-nav > li > a {
+    font-weight: 300;
+    font-size: 20px;
+  }
+  .navbar-nav > .active > a {
+    font-weight: 700;
   }
 
-  &.navbar-inverse {
-    @include nav-soft-shadow;
-    @include nav-no-border;
-
-    .navbar-nav > li > a {
-      display: block;
-      margin: auto;
-      position: relative;
-      text-align: center;
-    }
-
+  &.navbar-default {
     .navbar-nav > .active > a {
-      font-weight: 800;
-
       &::after {
-        @include active-underline($gray-base);
+        @include active-underline($navbar-default-link-active-color);
       }
     }
   }
@@ -113,21 +131,38 @@ h1,
 h2,
 h3,
 h4 {
-  font-weight: 100;
+  font-weight: 300;
 }
 
 // Panels =================================================================
 
 .panel {
-  @include no-bottom-border;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+  border: none;
 }
 
-.panel-default {
-
+.panel-primary,
+.panel-danger,
+.panel-warning,
+.panel-success,
+.panel-info {
   .panel-heading,
-  .panel-footer {
-    color: $gray;
-    font-weight: 300;
+  .panel-title {
+    font-weight: 400;
+    a {
+      display: block;
+      cursor: pointer;
+    }
+    a:after {
+      font-family: 'Glyphicons Halflings';
+      content: "\e259";
+      float: right;
+      transition: .4s;
+    }
+    a.collapsed:after {
+      transform: rotate(90deg);
+      transition: .4s;
+    }
   }
 }
 
@@ -157,38 +192,18 @@ h4 {
 
 // Alerts =================================================================
 .alert {
-  @include no-bottom-border;
-  text-align: center;
-
   * {
     @include transition(.25s);
   }
-
-  .close {
-    color: $gray-base;
-  }
-
-  .alert-link {
-    color: $gray-base;
-    opacity: .5;
-
-    &:hover {
-      opacity: .75;
-    }
-  }
 }
-
 
 // Jumbotron =================================================================
 .container,
 .container-fluid {
-
   .jumbotron {
-    @include no-bottom-border;
     border-radius: 0;
   }
 }
-
 
 // List Groups =================================================================
 
@@ -212,12 +227,89 @@ h4 {
 // Modals =================================================================
 
 .modal {
-
   .modal-dialog {
-
     .modal-content {
       @include nav-soft-shadow;
       border-radius: 0;
     }
+  }
+}
+
+// Control label ==============================================================
+
+.control-label {
+  font-weight: 300;
+  font-size: 18px;
+}
+
+// Forms =================================================================
+
+.form-control {
+  height: 36px;
+  font-size: 18px;
+  font-weight: 600px;
+  box-shadow: none;
+}
+
+#focusedInput {
+  background-color: #ffffff;
+  border: solid 1px #263238;
+}
+
+// Tables ==============================================
+
+.table {
+  $table-border-radius: 4px;
+  border-collapse: separate;
+  border-radius: $table-border-radius;
+
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top-width: 0px;
+      }
+    }
+  }
+
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom-width: 0px;
+  }
+
+  th {
+    background-color: $gray-blue-dark;
+    color: white;
+
+    &:first-child {
+      border-radius: $table-border-radius 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 $table-border-radius 0 0;
+    }
+
+    &:only-child {
+      border-radius: $table-border-radius $table-border-radius 0 0;
+    }
+  }
+
+  td {
+    &:first-child {
+      border-left: 1px solid $table-border-color;
+    }
+    &:last-child {
+      border-right: 1px solid $table-border-color;
+    }
+  }
+
+  tr:last-child td:first-child {
+    border-radius: 0 0 0 $table-border-radius;
+  }
+
+  tr:last-child td:last-child {
+    border-radius: 0 0 $table-border-radius 0;
   }
 }

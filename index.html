@@ -154,6 +154,7 @@
             <p class="bs-component">
               <a href="#" class="btn btn-default">Default</a>
               <a href="#" class="btn btn-primary">Primary</a>
+              <a href="#" class="btn btn-primary-inverted">Inverted</a>
               <a href="#" class="btn btn-success">Success</a>
               <a href="#" class="btn btn-info">Info</a>
               <a href="#" class="btn btn-warning">Warning</a>
@@ -251,9 +252,9 @@
             </p>
 
 
-            <div class="bs-component" style="margin-bottom: 15px;">
+            <div class="bs-component" style="margin-bottom: 15px;" data-toggle="buttons">
               <div class="btn-group btn-group-justified">
-                <a href="#" class="btn btn-default">Left</a>
+                <a href="#" class="btn btn-default active">Left</a>
                 <a href="#" class="btn btn-default">Middle</a>
                 <a href="#" class="btn btn-default">Right</a>
               </div>
@@ -418,7 +419,7 @@ const bsStylifyStatus = (s: UserStatus) => {
             </div>
 
             <div class="bs-component">
-              <table class="table table-striped table-hover ">
+              <table class="table table-striped table-hover table-condensed table-curved">
                 <thead>
                   <tr>
                     <th>#</th>
@@ -500,7 +501,7 @@ const bsStylifyStatus = (s: UserStatus) => {
                       <input type="text" class="form-control" id="inputEmail" placeholder="Email">
                     </div>
                   </div>
-                  <div class="form-group">
+                  <div class="form-group has-error">
                     <label for="inputPassword" class="col-lg-2 control-label">Password</label>
                     <div class="col-lg-10">
                       <input type="password" class="form-control" id="inputPassword" placeholder="Password">
@@ -557,7 +558,7 @@ const bsStylifyStatus = (s: UserStatus) => {
                   </div>
                   <div class="form-group">
                     <div class="col-lg-10 col-lg-offset-2">
-                      <button type="reset" class="btn btn-default">Cancel</button>
+                      <a href="#" class="btn btn-default">Cancel</a>
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div>
                   </div>
@@ -603,10 +604,10 @@ const bsStylifyStatus = (s: UserStatus) => {
                   <input type="text" class="form-control" id="inputDefault">
                 </div>
 
-                <div class="form-group">
+                <!-- <div class="form-group">
                   <label class="control-label" for="inputSmall">Small input</label>
                   <input class="form-control input-sm" type="text" id="inputSmall">
-                </div>
+                </div> -->
 
                 <div class="form-group">
                   <label class="control-label">Input addons</label>
@@ -614,7 +615,7 @@ const bsStylifyStatus = (s: UserStatus) => {
                     <span class="input-group-addon">$</span>
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Button</button>
+                      <button class="btn btn-primary" type="button">Button</button>
                     </span>
                   </div>
                 </div>

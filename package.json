@@ -1,6 +1,6 @@
 {
   "name": "adhawk-theme",
-  "version": "1.0.0",
+  "version": "2.0.8",
   "description": "SCSS theme for AdHawk",
   "repository": "https://github.com/adhawk/adhawk-theme",
   "scripts": {
@@ -15,12 +15,12 @@
     "gulp-gh-pages": "^0.5.4",
     "gulp-sass": "^2.3.2",
     "gulp-sass-lint": "^1.2.0",
-    "openurl": "^1.1.1",
+    "opn": "^5.1.0",
     "rimraf": "^2.5.4"
   },
   "dependencies": {
-    "node-bourbon": "^4.2.8",
     "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "node-bourbon": "^4.2.8"
   }
 }

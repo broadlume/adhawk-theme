@@ -1,5 +1,5 @@
 $icon-font-path: './../node_modules/bootstrap-sass/assets/fonts';
 @import './variables';
-@import './../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import './overriding/_bootstrap.scss';
 @import 'bourbon';
 @import './theme';
